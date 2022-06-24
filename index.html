@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
 
+<style>
+.content {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+p { font-size: 32px; }
+h1 { font-size: 96px; }
+</style>
+
+<div class="content">
+    <p>Today is the day</p>
+    <h1 id="todayis"></h1>
+    <p>since russia have launched a full-scale invasion of Ukraine</p>
+</div>
+
+<script>
+    const started = new Date("2/24/2022");   
+    const today = new Date();
+    var timediff = today.getTime() - started.getTime();   
+    var daydiff = timediff / (1000 * 60 * 60 * 24);
+    document.getElementById("todayis").innerHTML = Math.floor(daydiff);
+</script>
+
+</body>
+</html>
