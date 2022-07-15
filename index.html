@@ -26,7 +26,7 @@ h1 { font-size: 180px; }
     const started = new Date("2/24/2022");   
     const today = new Date();
     var timediff = today.getTime() - started.getTime();   
-    var daydiff = timediff / (1000 * 60 * 60 * 24);
+    var daydiff = timediff / (1000 * 60 * 60 * 24) + 1;
     document.getElementById("todayis").innerHTML = Math.floor(daydiff);
 </script>
 
